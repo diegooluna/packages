@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    background-color: #212121;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+main{
+    max-width: 75rem;
+    padding: 3em 1.5em;
+}
+
+.mainheading{
+    font-weight: 600;
+    font-size:2.25em;
+    margin-bottom: 0.75em;
+    text-align: center;
+    color: #eceff1;
+}
+.maincards{
+    display: inline;
+}
+.cards{
+    position: relative;
+}
+.cards_inner{
+    display: flex;
+    flex-wrap:nowrap ;
+    gap: 2em;
+}
+.cards__card{
+    /* margin: 2rem; */
+    flex: 1;
+}
+.card{
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    align-items: start;
+    gap: 1.6em;
+    color: #eceff1;
+    background-color: #2b2b2b;
+    border: 1px solid #eceff133;
+    border-radius: 15px;
+    padding: 1.5em 2em;
+    transition: 400ms  background  ease;
+
+}
+
+li{
+    line-height: 1.8;
+}
+.doublecheck{
+    width: 1rem;
+    margin-right: 6px;
+}
+.card:hover{
+    background: hsla(var(--hsl), 0.1);
+}
+.card:nth-child(1):hover{
+    background-color: #203c1e;
+}
+.card:nth-child(2):hover{
+    background-color: #1e393c;
+}
+.card:nth-child(3):hover{
+    background-color: #3c1e3b;
+}
+a{
+    text-decoration: none;
+    background-color: rgb(28, 27, 27);
+    color: #8c8c8c;
+    border: 1px solid #eceff133;
+    border-radius: 8px;
+    padding: 4px;
+    text-align: center;
+}
+a:hover{
+    border: 1px solid #ffffff;
+    transition: 0.5s;
+}
+.btn:hover{
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+    transition: 0.5s;
+}
+.card__price{
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 800px)  {
+    .cards_inner{
+        display:flex;
+        flex-direction: column;
+        flex-wrap:nowrap ;
+        gap: 2em;
+        overflow: hidden;
+    }
+    
+}
